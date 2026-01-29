@@ -3,102 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>My Retro Website</title>
+
+    <!-- Google Font for Retro Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Press Start 2P', cursive;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(45deg, #000428, #004e92);
+            color: #00ffcc;
+            animation: bgMove 10s infinite alternate;
         }
+
+        /* Background Animation */
+        @keyframes bgMove {
+            from { background-position: 0% 50%; }
+            to { background-position: 100% 50%; }
+        }
+
         header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
+            background: black;
+            color: #00ff00;
+            padding: 30px;
             text-align: center;
+            border-bottom: 4px solid #00ffcc;
+            animation: glow 2s infinite alternate;
         }
+
+        /* Glow Animation */
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #00ffcc; }
+            to { text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc; }
+        }
+
         nav {
-            background-color: #555;
-            padding: 10px;
+            background: #111;
+            padding: 15px;
             text-align: center;
+            border-bottom: 2px solid #00ffcc;
         }
+
         nav a {
-            color: white;
+            color: #00ffcc;
             margin: 0 15px;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 12px;
+            transition: 0.3s;
         }
+
         nav a:hover {
-            text-decoration: underline;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
         }
+
         section {
-            padding: 20px;
+            padding: 25px;
             max-width: 900px;
-            margin: auto;
-            background: white;
+            margin: 30px auto;
+            background: rgba(0, 0, 0, 0.8);
+            border: 3px solid #00ffcc;
+            border-radius: 10px;
+            animation: slideUp 1.5s ease;
         }
+
+        /* Slide Animation */
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
         .card {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            border: 2px dashed #00ffcc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            background: #000;
+            animation: flicker 3s infinite;
         }
+
+        /* Screen Flicker Effect */
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+
         footer {
-            background-color: #333;
-            color: white;
+            background: black;
+            color: #00ffcc;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 15px;
+            border-top: 3px solid #00ffcc;
         }
+
         button {
-            padding: 10px 15px;
-            background-color: #28a745;
+            padding: 12px 20px;
+            background: #ff00ff;
             border: none;
             color: white;
             cursor: pointer;
             border-radius: 5px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            box-shadow: 0 0 10px #ff00ff;
+            transition: 0.3s;
         }
+
         button:hover {
-            background-color: #218838;
+            background: #00ffcc;
+            color: black;
+            box-shadow: 0 0 20px #00ffcc;
+            transform: scale(1.1);
+        }
+
+        h1, h2 {
+            animation: pulse 2s infinite;
+        }
+
+        /* Pulse Effect */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to My Website</h1>
-        <p>Simple Website using HTML & CSS</p>
+        <h1>RETRO WEBSITE</h1>
+        <p>8-Bit Style Web Experience</p>
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
     </nav>
 
     <section id="home">
-        <h2>Home</h2>
+        <h2>HOME</h2>
         <div class="card">
-            <p>This is a simple website created using HTML and CSS. You can use this as a base for your projects.</p>
+            <p>Welcome to my retro-style website with classic animations and glowing effects.</p>
         </div>
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2>ABOUT</h2>
         <div class="card">
-            <p>Hello! I am learning web development. This website is my practice project.</p>
+            <p>I am learning web development and creating cool retro designs.</p>
         </div>
     </section>
 
     <section id="services">
-        <h2>My Services</h2>
+        <h2>SERVICES</h2>
         <div class="card">
             <ul>
-                <li>Website Design</li>
+                <li>Web Design</li>
                 <li>Video Editing</li>
                 <li>Content Creation</li>
             </ul>
@@ -106,18 +171,17 @@
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
+        <h2>CONTACT</h2>
         <div class="card">
             <p>Email: example@gmail.com</p>
             <p>Phone: +91 9876543210</p>
-            <button onclick="alert('Thank you for contacting!')">Send Message</button>
+            <button onclick="alert('MESSAGE SENT!')">SEND</button>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 My Website | All Rights Reserved</p>
+        <p>© 2026 RETRO WEBSITE | POWERED BY HTML + CSS</p>
     </footer>
 
 </body>
 </html>
-
